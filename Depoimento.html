@@ -4,6 +4,9 @@
 <html lang="en">
   <head>
   	<title>OtagamerZ</title>
+	  <!-- ARQUIVOS CSS -->
+	<link href="css/demo.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="css/component.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link rel="icon" href="https://ncheater.github.io/aula/img/favicon.png" type="image/png">
 	<link rel="stylesheet" href="https://ncheater.github.io/aula/css/styles.css" type="text/css">
     <!-- Required meta tags -->
@@ -120,7 +123,7 @@
 <div class="container contentstyle">
 	<div class="mt-1" style= "color: #FFF;">
 		<h1>Depoimentos</h1>
-			<p class="lead">Deixe aqui sua opinião sobre o site!</p>
+			<p class="lead"></p>
 			<center>
 			<h2 style="padding-top: 170px;">Slides de clientes satisfeitos com o nosso trabalho</h2>
 			
@@ -141,7 +144,6 @@
   
   </p> </blockquote> <div class="arrow-down"></div> <p class="testimonial-author">
 
- 
                 <h4>Alana</h4>
               </div>
             </article>
@@ -180,57 +182,7 @@
 
 	</center>
 
-<center>
 
-<form name="commentform" method="post" action="insertcomment.php">
-
-   <strong><h3>Nome: &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="nome" style="width:284px; height:25px;" /><br /></h3></strong>
-
-   <strong><h3>E-mail:&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email" style="width:284px; height:25px;" /><br /><br /></h3></strong>
-
-   <strong><h3>Website:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="website" style="width:284px; height:25px;" /><br /><br /></h3></strong>
-
-   <strong><h3>Comentário: <textarea name="comentario" style="resize:none; width:280px; height:120px;"></textarea><br /></h3></strong>
-
-<input type="submit" name="submit" value="Enviar Comentário" style="width:130px; height:30px;"/>
-
-</form><hr /><br /><br />
-    <strong><h2>Depoimentos Atuais</h2></strong>
-
-
-</center>
-
-   
-
-<?php
-     $sql = "SELECT * FROM comentarios_tb ORDER BY id desc";
-	 $query = mysql_query($sql);
-	 $row = mysql_num_rows($query);
-	 if ($row > 0) {
-		   while ($linha = mysql_fetch_array($query)) {
-			   $nome = $linha['nome'];
-			   $email = $linha['email'];
-			   $website = $linha['website'];
-			   $comentario = $linha['comentario'];
-			   echo "<strong>Nome:</strong> <a href='$website'>$nome </a>";
-			   echo "<br />";
-			   echo "<strong>Depoimento:</strong> $comentario";
-			   echo "<hr /><br /><br />";
-			 
-		   }
-	 }else{
-		 
-		 echo "Ainda não existem depoimentos. Seja o primeiro a comentar.";
-			   } 
-		    
-			
-	 	   
-?>
-        
-		
-		
-		
-	</div>
 	
 </div>
 <!-- Fim do corpo -->
